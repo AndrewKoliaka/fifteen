@@ -9,7 +9,7 @@ const del = require('del');
 gulp.task('connect', () => {
     connect.server({
         port: 3000,
-        root: './dist',
+        root: './',
         livereload: true
     });
 });
@@ -37,7 +37,8 @@ gulp.task('html', () => {
 
 gulp.task('css', () => {
     gulp.src('src/assets/styles.css')
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist'))
+        .pipe(connect.reload());
 });
 
 gulp.task('watch', () => {
