@@ -1,0 +1,20 @@
+{
+  "name": "fifteen",
+  "description": "simple clone of fifteen puzzle game",
+  "main": "index.html",
+  "authors": [
+    "andrew.koliaka"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
