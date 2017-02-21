@@ -15,6 +15,7 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
+            'src/assets/libs/jquery/dist/jquery.min.js',
             'src/js/*.js',
             'specs/*.js'
         ],
@@ -30,7 +31,7 @@ module.exports = function(config) {
             'src/js/*.js': ['browserify'],
             'specs/*.js': ['browserify']
         },
-        
+
         browserify: {
             debug: true,
             transform: [
