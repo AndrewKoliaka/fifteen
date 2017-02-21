@@ -3,8 +3,8 @@ import view from './view';
 
 $(() => {
     board.init();
-    board.print();
     board.shuffle();
-    board.print();
     view.fill();
+    board.print();
+    view.move(1, 'down')
 });

@@ -14,12 +14,16 @@ var board = {
     },
     shuffle: function shuffle() {
         var numbers = [];
-        for (var i = 0; i < 16; i++) {
+        for (var i = 1; i < 16; i++) {
             numbers.push(i);
         }
 
         for (var _i = 0; _i < 4; _i++) {
             for (var j = 0; j < 4; j++) {
+                if (!numbers.length) {
+                    _board[_i][j] = 0;
+                    break;
+                }
                 var random = Math.floor(Math.random() * numbers.length);
                 _board[_i][j] = numbers.splice(random - 1, 1)[0];
             }
@@ -54,10 +58,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 $(function () {
     _board2.default.init();
-    _board2.default.print();
     _board2.default.shuffle();
-    _board2.default.print();
     _view2.default.fill();
+    _board2.default.print();
+    _view2.default.move(1, 'down');
 });
 
 },{"./board":1,"./view":3}],3:[function(require,module,exports){

@@ -13,7 +13,6 @@ main {
 
 main .cell {
 	position: relative;
-	// box-sizing: content-box;
     display: inline-block;
     float: left;
     border: 3px solid red;
