@@ -13,7 +13,6 @@ main {
     margin: auto;
     width: 400px;
     height: 550px;
-    trasition: all 2s;
 }
 
 main #game_stats {
@@ -31,7 +30,6 @@ main #game_stats button {
     font-family: Arial;
     font-size: 1em;
     color: #ffffff;
-    font-size: 2empx;
     background: #83929c;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
