@@ -1,10 +1,7 @@
 import board from './board';
 import view from './view';
+import game from './game';
 
 $(() => {
-    board.init();
-    board.shuffle();
-    view.fill();
-    board.print();
-    view.move(1, 'down')
+    game.init();
 });

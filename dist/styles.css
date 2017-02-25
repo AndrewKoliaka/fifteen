@@ -1,3 +1,7 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
 main {
     display: block;
     position: absolute;
@@ -6,25 +10,95 @@ main {
     bottom: 0;
     left: 0;
     margin: auto;
-    border: 2px solid black;
+    width: 400px;
+    height: 550px;
+    trasition: all 2s;
+}
+
+main #game_stats {
+    box-sizing: border-box;
+    padding-top: 20px;
+    height: 80px;
+    text-align: center;
+}
+
+main #game_stats button {
+    outline: none;
+    margin-top: 40px;
+    border: none;
+    border-radius: 28px;
+    font-family: Arial;
+    font-size: 1em;
+    color: #ffffff;
+    font-size: 2empx;
+    background: #83929c;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#game_stats button:hover {
+    background: #404142;
+    text-decoration: none;
+}
+
+main #game_stats #moves {
+    margin-top: 20px;
+}
+
+#playground {
+    position: absolute;
+    bottom: 0;
     width: 400px;
     height: 400px;
 }
 
-main .cell {
-	position: relative;
+#playground .cell {
+    position: relative;
     display: inline-block;
     float: left;
-    border: 3px solid red;
-    width: 94px;
-    line-height: 1;
-    height: 94px;
+    border: 3px solid #FF7373;
+    border-radius: 10px;
+    margin: 1px;
+    width: 92px;
+    height: 92px;
+    line-height: 92px;
+    color: #606060;
+    font-weight: bold;
+    font-size: 3em;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
 }
 
-.down {
-	// top: 100px;
+#popup {
+    display: table;
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    background-color: #D8DFE5;
+    z-index: 9999;
+    border-radius: 10px;
 }
 
-.up {
-	
+#popup_content {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+#popup #close_btn {
+    font-size: 1.5em;
+    color: #83929c;
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
 }

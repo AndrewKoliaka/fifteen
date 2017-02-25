@@ -5,6 +5,7 @@ const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const useref = require('gulp-useref');
 const del = require('del');
+const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('connect', () => {
     connect.server({
@@ -24,7 +25,7 @@ gulp.task('js', () => {
 });
 
 gulp.task('assets', () => {
-    gulp.src('src/assets/libs/jquery/dist/jquery.min.js')
+    gulp.src('./src/assets/libs/jquery/dist/jquery.min.js')
         .pipe(gulp.dest('./dist/js'));
 });
 
@@ -36,7 +37,8 @@ gulp.task('html', () => {
 });
 
 gulp.task('css', () => {
-    gulp.src('src/assets/styles.css')
+    gulp.src('./src/assets/styles.css')
+        .pipe(autoprefixer())
         .pipe(gulp.dest('./dist'))
         .pipe(connect.reload());
 });
@@ -48,7 +50,7 @@ gulp.task('watch', () => {
 });
 
 gulp.task('del', () => {
-    del(['dist', 'index.html']);
+    del(['./dist', './index.html']);
 });
 
 gulp.task('build', ['assets', 'js', 'css', 'html']);
