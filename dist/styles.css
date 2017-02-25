@@ -12,7 +12,7 @@ main {
     left: 0;
     margin: auto;
     width: 400px;
-    height: 550px;
+    height: 570px;
 }
 
 main #game_stats {
@@ -28,7 +28,7 @@ main #game_stats button {
     border: none;
     border-radius: 28px;
     font-family: Arial;
-    font-size: 1em;
+    font-size: 1.3em;
     color: #ffffff;
     background: #83929c;
     padding: 10px 20px 10px 20px;
@@ -43,6 +43,7 @@ main #game_stats button {
 
 main #game_stats #moves {
     margin-top: 20px;
+    font-size: 1.2em;
 }
 
 #playground {
