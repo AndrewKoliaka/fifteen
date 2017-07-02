@@ -9,8 +9,7 @@ simple clone of fifteen puzzle
 ```
 git clone https://github.com/AndrewKoliaka/fifteen.git
 cd fifteen
-npm install
-bower install
+npm install & bower install
 gulp
 ```
-go to http://localhost:3000/
+then go to http://localhost:3000/
